@@ -7,7 +7,7 @@ public class imager {
 	public static BufferedImage image(){
 		int width = 512;
 		int height = 512;
-		List<Integer> inlist = encoder.inList("!!!!!!!");
+		List<Integer> inlist = encoder.inList("asdfghj");
 		BufferedImage im = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
 		WritableRaster raster = im.getRaster();
 		int rows = width/(inlist.size()/3);
@@ -18,7 +18,7 @@ public class imager {
 				if(i<inlist.size()){
 					int[] value = {inlist.get(i),inlist.get(i+1),inlist.get(i+2)};
 					for(int wr=0;wr<rows;wr++){
-						im.setRGB(wr+(rows*w), h, value);
+						raster.setPixel(wr+(rows*w), h, value);
 					}
 					i+=3;
 				}
