@@ -5,6 +5,7 @@ import java.util.List;
 public class encoder {
 	public static List<Integer> inList(String input){
 		List<Integer> c = new ArrayList<Integer>();
+		System.out.println(input.length());
 		for(int i=0;i<input.length();i++){
 			char a_char = input.charAt(i);
 			c.add((int) a_char);
